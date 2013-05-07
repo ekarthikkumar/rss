@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+<script type="text/javascript">
+	$(function() {
+		$("#data-button-1").click(showAlert);
+	});
+	
+	function showAlert() {	
+		//alert(jsonData.fd);
+		$("p.docs").text("hai");
+	} 
+</script>
+{% endblock %}
+
+{% block content %}
+	<input type="button" value="Show Params" id="data-button-1" />
+	
+	<p class="docs"></p>
+
+	<a href="/feeds/rss/python/">Python feeds</a><br>
+	<a href="/feeds/rss/django/">django feeds</a><br>
+	<a href="/feeds/rss/html/">Html job feeds</a><br>
+{% endblock %}
