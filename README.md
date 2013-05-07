@@ -1,4 +1,3 @@
-
 rss tutor
 =========
 
@@ -8,7 +7,7 @@ tagging/templates/registration/searchresult.html
 
 
 BELOW:<div style="border:1px solid yellow;width:890px;"><table><tr><td>{% if details %}
-=======================================================================================
+---------------------------------------------------------------------------------------
 
 ::
 
@@ -26,17 +25,16 @@ urls.py
 
 
 BELOW: urlpatterns = patterns(''
-================================
+--------------------------------
 
 ::
-
 
 	url(r'^feeds/tag/(?P<bits>.*)/$', 'registration.views.rss201'),
 	
 
 
 registration/views.py
-#####################
+---------------------
 
 on top:
 	
@@ -70,13 +68,13 @@ on top:
 
 
 BELOW: 	def search_result(request)
-==================================
+----------------------------------
 
     rssfeed=''
     if search and not city:rssfeed+=search
     
 Along line: 	 return render_to_response(
-===========================================
+-------------------------------------------
 
    
     {'rsskey':rssfeed
