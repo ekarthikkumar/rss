@@ -1,7 +1,6 @@
 
-#########
 rss tutor
-#########
+=========
 
 
 tagging/templates/registration/searchresult.html 
