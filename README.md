@@ -6,8 +6,8 @@ tagging/templates/registration/searchresult.html
 ################################################
 
 
-BELOW:<div style="border:1px solid yellow;width:890px;"><table><tr><td>{% if details %}
----------------------------------------------------------------------------------------
+BELOW: `<div style="border:1px solid yellow;width:890px;"><table><tr><td>{% if details %}
+-----------------------------------------------------------------------------------------
 
 ::
 
