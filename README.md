@@ -1,36 +1,42 @@
-rss tutor
-=========
+## rss tutor
 
-
-tagging/templates/registration/searchresult.html 
-================================================
-
-
-BELOW: 
+BELOW: 	
 ------
-'<div style="border:1px solid yellow;width:890px;"><table><tr><td>{% if details %}'
+
+    def search_result(request)
+
+        rssfeed=''
+        if search and not city:rssfeed+=search
+        
+        .......
+        return render_to_response({'rsskey':rssfeed.....
+        
+        
+
+### tagging/templates/registration/searchresult.html 
+
+#### BELOW: 
+
+`<div style="border:1px solid yellow;width:890px;"><table><tr><td>{% if details %}`
 
 ::
-
-	{% if rsskey %}
-	<span><a href='/feeds/tag/{{ rsskey }}' target="_blank" >
-	<img src="http://feedicons.com/images/feed-icon-14x14.png">
-	Subscribe to this feed in your RSS Reader</a></span>
-	{% endif %}
+    
+    {% if rsskey %}
+    <span><a href='/feeds/tag/{{ rsskey }}' target="_blank" >
+    <img src="http://feedicons.com/images/feed-icon-14x14.png">
+    Subscribe to this feed in your RSS Reader</a></span>
+    {% endif %}
 	<!--/-->
 	
 
-
-urls.py
-#######
-
+#### urls.py
 
 BELOW: urlpatterns = patterns(''
 --------------------------------
 
 ::
 
-	url(r'^feeds/tag/(?P<bits>.*)/$', 'registration.views.rss201'),
+    url(r'^feeds/tag/(?P<bits>.*)/$', 'registration.views.rss201'),
 	
 
 
@@ -66,19 +72,4 @@ on top:
 	    feed.write(response, 'utf-8')
 	    return response
 	
-
-
-BELOW: 	def search_result(request)
-----------------------------------
-
-    rssfeed=''
-    if search and not city:rssfeed+=search
-    
-Along line: 	 return render_to_response(
--------------------------------------------
-
-   
-    {'rsskey':rssfeed
-
-=============================================
 
